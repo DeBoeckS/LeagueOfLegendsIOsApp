@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>itemsUrl</key>
+	<string>https://global.api.pvp.net/api/lol/static-data/euw/v1.2/item?itemListData=image&amp;api_key=48a70de8-0366-4dc5-a88a-455f6240fea2</string>
+	<key>itemImage</key>
+	<string>http://ddragon.leagueoflegends.com/cdn/6.1.1/img/item/</string>
+	<key>apiKey</key>
+	<string>?api_key=48a70de8-0366-4dc5-a88a-455f6240fea2</string>
+	<key>itemDetails</key>
+	<string>https://global.api.pvp.net/api/lol/static-data/euw/v1.2/item/</string>
+	<key>imageUrl</key>
+	<string>http://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/</string>
+	<key>baseUrl</key>
+	<string>https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion?champData=blurb,image,info,recommended&amp;api_key=48a70de8-0366-4dc5-a88a-455f6240fea2</string>
+</dict>
+</plist>

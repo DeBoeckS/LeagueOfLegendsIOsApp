@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Xcode 7.0">
+    <entity name="ItemDetail" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="full" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="build" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserBuild" inverseName="items" inverseEntity="UserBuild" syncable="YES"/>
+    </entity>
+    <entity name="UserBuild" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemDetail" inverseName="build" inverseEntity="ItemDetail" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UserBuild" positionX="288" positionY="-3" width="128" height="73"/>
+        <element name="ItemDetail" positionX="-36" positionY="18" width="128" height="118"/>
+    </elements>
+</model>
