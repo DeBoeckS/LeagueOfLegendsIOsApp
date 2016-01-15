@@ -1,4 +1,4 @@
-//
+﻿//
 //  ChampionsViewController.swift
 //  League of Legends
 //
@@ -61,6 +61,9 @@ class ChampionsViewController: UICollectionViewController{
        
         return cell
     }
+
+   /*Source: http://stackoverflow.com/questions/24231680/loading-image-from-url 
+   */
     
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
         NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in

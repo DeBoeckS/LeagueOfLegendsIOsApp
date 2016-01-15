@@ -1,4 +1,4 @@
-//
+﻿//
 //  ChampionsViewController.swift
 //  League of Legends
 //
@@ -69,6 +69,9 @@ class UserBuildCollectionViewController: UICollectionViewController{
         
         return cell
     }
+
+    /*Source: http://stackoverflow.com/questions/24231680/loading-image-from-url 
+   */
     
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
         NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
@@ -108,20 +111,20 @@ class UserBuildCollectionViewController: UICollectionViewController{
                 cell?.backgroundColor = UIColor.orangeColor()
                 
                 let selected = items[indexPath.item]
-                //1
+                
                 let appDelegate =
                 UIApplication.sharedApplication().delegate as! AppDelegate
                 
                 let managedContext = appDelegate.managedObjectContext
                 
-                //2
+                
                 let entity =  NSEntityDescription.entityForName("ItemDetail",
                     inManagedObjectContext:managedContext)
                 
                 let item = NSManagedObject(entity: entity!,
                     insertIntoManagedObjectContext: managedContext)
                 
-                //3
+               
                 
                 item.setValue(selected.name, forKey: "name")
                 item.setValue(selected.id, forKey: "id")
@@ -129,10 +132,9 @@ class UserBuildCollectionViewController: UICollectionViewController{
                 item.setValue(selected.desc, forKey: "desc")
                 
                 
-                //4
+                
                 do {
                     try managedContext.save()
-                    //5
                     selecteditems.append(item)
                 } catch let error as NSError  {
                     print("Could not save \(error), \(error.userInfo)")
